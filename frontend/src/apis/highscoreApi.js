@@ -1,6 +1,6 @@
 import axiosClient from './axiosClient';
 
-const URL = '/apis/highscore';
+const URL = '/highscore';
 
 const highscoreApi = {
   putUpdateHighscore(name = '', score = 0) {

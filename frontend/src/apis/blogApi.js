@@ -1,6 +1,6 @@
 import axiosClient from './axiosClient';
 
-const URL = '/apis/blog';
+const URL = '/blog';
 
 const blogApi = {
   getBlogList: () => {

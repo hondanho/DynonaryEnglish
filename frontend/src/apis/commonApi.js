@@ -1,6 +1,6 @@
 import axiosClient from './axiosClient';
 
-const URL = '/apis/common';
+const URL = '/common';
 
 const commonApi = {
   getWordPackTotal: (packInfo) => {

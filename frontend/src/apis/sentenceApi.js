@@ -1,6 +1,6 @@
 import axiosClient from './axiosClient';
 
-const URL = '/apis/sentence';
+const URL = '/sentence';
 
 const sentenceApi = {
   postContributeSentence: (sentence, mean, note, topics) => {
