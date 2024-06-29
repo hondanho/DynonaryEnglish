@@ -1,6 +1,6 @@
 import axiosClient from './axiosClient';
 
-const URL = '/flashcard';
+const URL = '/apis/flashcard';
 
 const flashcardApi = {
   getWordPack: (page = 1, perPage = 8, packInfo) => {

@@ -1,6 +1,6 @@
 import axiosClient from './axiosClient';
 
-const URL = '/account';
+const URL = '/apis/account';
 
 const accountApi = {
   postRegisterAccount: (email, name, password) => {

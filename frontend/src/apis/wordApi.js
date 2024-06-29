@@ -1,6 +1,6 @@
 import axiosClient from './axiosClient';
 
-const URL = '/word';
+const URL = '/apis/word';
 
 const wordApi = {
   postContributeWord: (wordInfor) => {

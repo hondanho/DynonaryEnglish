@@ -1,6 +1,6 @@
 import axiosClient from './axiosClient';
 
-const URL = '/games';
+const URL = '/apis/games';
 
 const gameApi = {
   // correct word game
