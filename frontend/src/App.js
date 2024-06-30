@@ -41,7 +41,7 @@ function App() {
       ) : (
         <ThemeProvider theme={theme}>
           <Router>
-            <div className="dynonary-app">
+            <div className="abc-app">
               <Element name="scrollTop" />
               <Navigation />
 

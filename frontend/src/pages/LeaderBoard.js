@@ -22,7 +22,7 @@ function LeaderBoardPage() {
 
         <div className="leaderboard-grid">
           <LeaderBoardData
-            title="Top triệu phú Dyno Coin"
+            title="Top triệu phú Coin"
             color={COLORS[0]}
             nameId={HIGHSCORE_NAME.TOP_COIN}
             unit="$"

@@ -88,7 +88,7 @@ exports.postLogin = async (req, res) => {
 
     // set cookie with jwt
     const token = await jwtConfig.encodedToken(
-      process.env.JWT_SECRET_KEY || 'dynonary-serect',
+      process.env.JWT_SECRET_KEY || 'abc-serect',
       { accountId: account._id },
     );
     res.cookie(KEYS.JWT_TOKEN, token, {
@@ -134,7 +134,7 @@ exports.postLoginSocialNetwork = async (req, res) => {
 
     // set cookie with jwt
     const token = await jwtConfig.encodedToken(
-      process.env.JWT_SECRET_KEY || 'dynonary-serect',
+      process.env.JWT_SECRET_KEY || 'abc-serect',
       { accountId },
     );
 
@@ -322,7 +322,7 @@ exports.getVerifyCode = async (req, res) => {
 
     const mail = {
       to: email,
-      subject: 'Dynonary - Mã xác nhận đổi mật khẩu',
+      subject: 'ABC English - Mã xác nhận đổi mật khẩu',
       html: mailConfig.htmlResetPassword(verifyCode),
     };
 

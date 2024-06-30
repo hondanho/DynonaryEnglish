@@ -59,7 +59,7 @@ mongoose.connect(MONGO_URL, {
   useCreateIndex: true,
 });
 const corsOptions = {
-  origin: 'http://localhost:8888', // The specific origin you want to allow
+  origin: 'http://localhost:8010', // The specific origin you want to allow
   credentials: true,               // Allow credentials (cookies, authorization headers, etc.)
 };
 // ================== config ==================

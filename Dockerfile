@@ -1,5 +1,5 @@
-# Sử dụng node:14.21.3 làm base image
-FROM node:14.21.3 AS build-stage
+# Giai đoạn build cho frontend
+FROM node:14.21.3 AS frontend-build
 
 # Thiết lập thư mục làm việc cho frontend
 WORKDIR /usr/src/app/frontend
@@ -16,6 +16,9 @@ COPY ./frontend .
 # Chạy lệnh build cho frontend
 RUN npm run build
 
+# Giai đoạn build cho backend
+FROM node:14.21.3 AS backend-build
+
 # Thiết lập thư mục làm việc cho backend
 WORKDIR /usr/src/app/backend
 
@@ -29,11 +32,12 @@ RUN npm install
 COPY ./backend .
 
 # Copy thư mục build của frontend vào thư mục backend
-COPY --from=build-stage /usr/src/app/frontend/build ./src/build
+COPY --from=frontend-build /usr/src/app/frontend/build ./src/build
 
-# Chạy lệnh build cho backend (nếu cần)
+WORKDIR /usr/src/app/backend
+# (Tùy chọn) Chạy lệnh build cho backend nếu có lệnh build riêng
 # RUN npm run build (nếu backend có lệnh build riêng)
 
 # Expose port và thiết lập lệnh khởi động
-EXPOSE 5000
+EXPOSE 8009
 CMD ["npm", "start"]

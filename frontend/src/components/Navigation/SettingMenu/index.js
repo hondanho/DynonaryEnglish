@@ -5,7 +5,7 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import HelpIcon from '@material-ui/icons/Help';
 import SettingsIcon from '@material-ui/icons/Settings';
 import SettingModal from 'components/SpeedDial/Settings/Modal';
-import { LINKS, ROUTES } from 'constant';
+import { ROUTES } from 'constant';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -38,13 +38,6 @@ function SettingMenu({ anchorEl, onClose }) {
         <SettingsIcon className={classes.icon} fontSize="small" />
         <p className={classes.text}>Cài đặt</p>
       </MenuItem>
-
-      <a href={LINKS.FB} target="_blank" rel="noreferrer">
-        <MenuItem className={classes.menuItem}>
-          <HelpIcon className={classes.icon} fontSize="small" />
-          <p className={classes.text}>Liên hệ - Giúp đỡ</p>
-        </MenuItem>
-      </a>
 
       <Link to={ROUTES.LOGOUT}>
         <MenuItem className={classes.menuItem}>
